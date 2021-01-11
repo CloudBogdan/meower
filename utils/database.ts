@@ -5,7 +5,8 @@ export async function connect() {
     console.log("Connected");
 
     await mongoose.connect("mongodb+srv://bogdanoff:123RF4Ru43568@cluster0.badug.mongodb.net/main?retryWrites=true&w=majority", {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     });
 
 }
