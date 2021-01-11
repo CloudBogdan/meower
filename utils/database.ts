@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+import config from "./config";
 
 export async function connect() {
 
     console.log("Connected");
 
-    await mongoose.connect("mongodb+srv://bogdanoff:123RF4Ru43568@cluster0.badug.mongodb.net/main?retryWrites=true&w=majority", {
+    await mongoose.connect(config.mongo_url, {
         useNewUrlParser: true
     });
 
